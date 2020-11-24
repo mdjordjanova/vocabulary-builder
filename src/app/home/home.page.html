@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card color=light>
+    <ion-item color=light>
+      <ion-label>Weekly Report</ion-label>
+    </ion-item>
+    <ion-card-content>
+      <google-chart [data]="groupAreaChart"></google-chart>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

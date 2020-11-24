@@ -1,1 +1,7 @@
-
+ion-tabs {
+  ion-tab-bar {
+    --background: var(--ion-color-primary);
+    --color: grey;
+    --color-selected: var(--ion-color-light);
+  }
+}

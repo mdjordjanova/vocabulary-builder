@@ -4,32 +4,35 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'tabs/home',
+    pathMatch: 'full'
+  },
+  {
     path: 'tabs',
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
-        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+        path: 'home',
+        loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
       },
       {
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        path: 'courses',
+        loadChildren: () => import('../courses/courses.module').then(m => m.CoursesPageModule)
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        path: 'vocabulary',
+        loadChildren: () => import('../vocabulary/vocabulary.module').then(m => m.VocabularyPageModule)
       },
       {
-        path: '',
-        redirectTo: '/tabs/tab1',
-        pathMatch: 'full'
+        path: 'settings',
+        loadChildren: () => import('../settings/settings.module').then(m => m.SettingsPageModule)
+      },
+      {
+        path: 'account',
+        loadChildren: () => import('../account/account.module').then(m => m.AccountPageModule)
       }
     ]
-  },
-  {
-    path: '',
-    redirectTo: '/tabs/tab1',
-    pathMatch: 'full'
   }
 ];
 
@@ -37,4 +40,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule { }
