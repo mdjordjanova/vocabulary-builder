@@ -6,5 +6,4 @@ import { Component } from "@angular/core";
   styleUrls: ['vocabulary.page.scss']
 })
 export class VocabularyPage {
-  constructor() { }
 }
